@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Emblazoned\\Blaze\\" : "src/"
+            "Arki\\Blaze\\" : "src/"
         }
     }
 }
