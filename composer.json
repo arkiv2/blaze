@@ -1,0 +1,22 @@
+{
+    "name": "arkiv2/blaze",
+    "description": "A PHP micro-framework for educational purposes",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arki Valencia II",
+            "email": "arkiv2@arkiproductions.me"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Emblazoned\\Blaze\\" : "src/"
+        }
+    }
+}
