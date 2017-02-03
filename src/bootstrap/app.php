@@ -1,21 +1,19 @@
 <?php
 
-namespace Emblazoned\Blaze;
+namespace Arki\Blaze;
 
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Request;
-use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
+use Whoops\Handler\PrettyPageHandler;
 
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
 /**
- * Instantiate \Symfony\Component\HttpFoundation\Request 
+ * Register the container the container 
  */
-$request = Request::createFromGlobals();
+$container = include __DIR__ . '/../container.php';
 
+$config = $container->get('config');
 
-error_reporting(E_ALL);
 
 $environment = 'development';
 
@@ -37,4 +35,3 @@ $whoops->register();
 /**
  * Register route handler
  */
-$route
