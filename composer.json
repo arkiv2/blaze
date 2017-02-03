@@ -13,7 +13,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "filp/whoops": "^2.1"
+    },
     "autoload": {
         "psr-4": {
             "Emblazoned\\Blaze\\" : "src/"
