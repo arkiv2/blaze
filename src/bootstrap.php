@@ -2,6 +2,9 @@
 
 namespace Emblazoned\Blaze;
 
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+
 require __DIR__ . '/../vendor/autoload.php';
 
 error_reporting(E_ALL);
@@ -21,7 +24,6 @@ else {
 		echo 'Todo: Friendly error page. Send mail to admin';
 	});
 }
-
 $whoops->register();
 
-throw new \Exception;
+$request = Request::createFromGlobals();
