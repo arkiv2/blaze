@@ -9,19 +9,6 @@ use Whoops\Handler\PrettyPageHandler;
 require __DIR__ . '/../../vendor/autoload.php';
 
 /**
- * Register dotenv
- */
-$dotenv = new Dotenv(__DIR__ . '/../../');
-$dotenv->load();
-
-
-/**
- * Register the container the container 
- */
-$container = include __DIR__ . '/../container.php';
-$config = $container->get('config');
-
-/**
  * Register error handler
  */
 
@@ -37,6 +24,24 @@ else {
 
 $whoops->register();
 
+
+
+/**
+ * Register dotenv
+ */
+$dotenv = new Dotenv(__DIR__ . '/../../');
+$dotenv->load();
+
+
+/**
+ * Register the container the container 
+ */
+$container = include __DIR__ . '/../container.php';
+$config = $container->get('config');
+
+
 /**
  * Register route handler
  */
+
+$router = include __DIR__ . '/../routes.php';
